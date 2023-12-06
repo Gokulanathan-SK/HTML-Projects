@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Video Form</title>
+  </head>
+
+  <body background="Images/Background Image.png">
+    <font face="Helvetica"> 
+      <h1 align="center">Tutorial Video Feedback Form</h1>
+      <hr color="black" width="98%"><br><br>
+      <form action="submit_form.php" method="post" autocomplete="on">
+        <table align="center" cellpadding="7">
+          <tr>
+            <th align="right"><label for="name">Username</label></th>
+            <td><input type="text" id="name" name="name" placeholder="eg: Gokulanathan"></td>
+          </tr>
+          <tr>
+            <th align="right"><label for="pwd">Password</label></th>
+            <td><input type="password" id="pwd" name="password" placeholder="Enter Your Password" required></td>
+          </tr>
+          <tr>
+            <th align="right"><label for="email">Email</label></th>
+            <td><input type="email" id="email" name="email" placeholder="eg: example@gmail.com" required></td>
+          </tr>
+          <tr>
+            <th align="right"><label for="tutorial">Tutorial Title</label></th>
+            <td><input type="text" id="tutorial" name="tutorial" placeholder="HTML Tutorial" required></td>
+          </tr>
+          <tr>
+            <th align="right"><label for="rating">Rating</label></th>
+            <td>
+              <select id="rating" name="rating" required>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Good</option>
+                <option value="2">Fair</option>
+                <option value="1">Poor</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th align="right"><label for="habit">What is Your Hobbies</label></th>
+            <td>
+              <input list="habit">
+              <datalist id="habit">
+                <option value="Coding"></option>
+                <option value="Web Designing"></option>
+                <option value="Database Management"></option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top"><label>Preferred Learning Format</label></th>
+            <td>
+              <input type="radio" name="learningFormat" value="video" required> Video<br>
+              <input type="radio" name="learningFormat" value="text" required> Text<br>
+              <input type="radio" name="learningFormat" value="interactive" required> Interactive<br>
+              <input type="radio" name="learningFormat" value="live" required> Live sessions<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top"><label>Optional Preferences</label></th>
+            <td>
+              <input type="checkbox" name="preferences[]" value="transcripts"> Provide transcripts<br>
+              <input type="checkbox" name="preferences[]" value="assignments"> Include assignments<br>
+              <input type="checkbox" name="preferences[]" value="quizzes"> Include quizzes<br>
+              <input type="checkbox" name="preferences[]" value="discussion"> Discussion forums<br>
+              <input type="checkbox" name="preferences[]" value="certification"> Certification option<br>
+            </td>
+          </tr>
+          <tr>
+            <th align="right" valign="top"><label for="comments">Comments</label></th>
+            <td> <textarea id="comments" name="comments" rows="5" cols="20"></textarea></td>
+          </tr>
+          <tr>
+            <th colspan="2">
+              <input type="submit" value="Submit Feedback">
+              <input type="reset" value="Reset">
+            </th>
+          </tr>
+        </table>
+      </form>
+    </font>
+  </body>
+</html>
